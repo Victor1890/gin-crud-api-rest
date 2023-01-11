@@ -63,17 +63,17 @@ air
 
 ### Get all products
 ```sh
-curl --location --request GET 'http://localhost:3000/api/'
+curl --location --request GET 'http://localhost:3000/api/products'
 ```
 
 ### Get one product
 ```sh
-curl --location --request GET 'http://localhost:3000/api/1'
+curl --location --request GET 'http://localhost:3000/api/products/1'
 ```
 
 ### Update one product
 ```sh
-curl --location --request PATCH 'http://localhost:3000/api/1' \
+curl --location --request PATCH 'http://localhost:3000/api/products/1' \
 --form 'name="Soap"' \
 --form 'brand="Gorgeous"' \
 --form 'price="209.09"' \
@@ -82,7 +82,7 @@ curl --location --request PATCH 'http://localhost:3000/api/1' \
 
 ### Create one product
 ```sh
-curl --location --request POST 'http://localhost:3000/api/' \
+curl --location --request POST 'http://localhost:3000/api/products' \
 --form 'name="Bacon"' \
 --form 'brand="Fantastic"' \
 --form 'price="795.23"' \

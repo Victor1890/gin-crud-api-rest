@@ -7,11 +7,12 @@ import (
 
 func ProductGroup(router *gin.RouterGroup) {
 
-	router.GET("", controllers.GetAllProductHandler)
-	router.GET("/", controllers.GetAllProductHandler)
-	router.GET("/:id", controllers.GetOneProductHandler)
-	router.POST("", controllers.CreateProductHandler)
-	router.PATCH("/:id", controllers.UpdateOneProductHandler)
-	router.DELETE("/:id", controllers.DeleteOneProductHandler)
+	router.GET("/products", controllers.GetAllProductHandler)
+	router.GET("/products/", controllers.GetAllProductHandler)
+	router.GET("/products/:id", controllers.GetOneProductHandler)
+	router.POST("/products", controllers.CreateProductHandler)
+	router.POST("/products/", controllers.CreateProductHandler)
+	router.PATCH("/products/:id", controllers.UpdateOneProductHandler)
+	router.DELETE("/products/:id", controllers.DeleteOneProductHandler)
 
 }
