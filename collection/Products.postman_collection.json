@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "d1bb9b8d-7899-4121-91b9-fb36ab7896d8",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9955507"
+	},
+	"item": [
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API}}/",
+					"host": [
+						"{{API}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API}}/:id",
+					"host": [
+						"{{API}}"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API}}/:id",
+					"host": [
+						"{{API}}"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{$randomProduct}}",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "{{$randomProductAdjective}}",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "{{$randomPrice}}",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/victo/Pictures/4k-wallpaper-black-and-white-bone-1270184.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API}}/",
+					"host": [
+						"{{API}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update one product",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{$randomProduct}}",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "{{$randomProductAdjective}}",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "{{$randomPrice}}",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/victo/Pictures/__40_III_1920_1080.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API}}/:id",
+					"host": [
+						"{{API}}"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
