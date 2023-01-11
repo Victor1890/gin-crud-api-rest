@@ -88,3 +88,7 @@ router.POST("/", controllers.CreateProductHandler)
 router.PATCH("/:id", controllers.UpdateOneProductHandler)
 router.DELETE("/:id", controllers.DeleteOneProductHandler)
 ```
+
+# Postman Collection
+
+We have a postman collection in order to do tests with the requests already created [collection](collection/Products.postman_collection.json)
