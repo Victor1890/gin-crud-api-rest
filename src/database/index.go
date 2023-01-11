@@ -22,7 +22,6 @@ func Database() {
 		panic(dbErr)
 	}
 
-	db.Migrator().DropTable(&models.Product{}, &models.File{})
 	migrationError := db.AutoMigrate(&models.Product{}, &models.File{})
 
 	if migrationError != nil {
