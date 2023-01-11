@@ -92,11 +92,12 @@ curl --location --request POST 'http://localhost:3000/api/products' \
 # Routes Code
 
 ```golang
-router.GET("/", controllers.GetAllProductHandler)
-router.GET("/:id", controllers.GetOneProductHandler)
-router.POST("/", controllers.CreateProductHandler)
-router.PATCH("/:id", controllers.UpdateOneProductHandler)
-router.DELETE("/:id", controllers.DeleteOneProductHandler)
+router.GET("/products", controllers.GetAllProductHandler)
+router.GET("/products/:id", controllers.GetOneProductHandler)
+router.POST("/products", controllers.CreateProductHandler)
+router.PATCH("/products/:id", controllers.UpdateOneProductHandler)
+router.DELETE("/products/:id", controllers.DeleteOneProductHandler)
+
 ```
 
 # Postman Collection
