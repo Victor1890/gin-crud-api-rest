@@ -1,5 +1,15 @@
 # API REST Golang / GIN
 
+## Why have I made the decision to choose this architecture?
+
+- Improves the organization and structure of the code, which makes it easier to understand and maintain.
+
+- Helps ensure system scalability and adaptability in the face of changing business or user requirements
+
+- Reduce costs and increase efficiency in software development and maintenance.
+
+---
+
 # How to clone
 
 Before cloning the repository, you need to have these technologies.
